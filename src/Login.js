@@ -1,28 +1,33 @@
 import React, {useState} from 'react';
 import './login.css';
 import img from './images/amazon_PNG11.png';
-import { Link } from 'react-router-dom';
-// import { auth } from './firebase';
+import { Link, useHistory } from 'react-router-dom';
+import { db } from './firebase';
+import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
+export const auth = getAuth();
 
 function Login () {
+    const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const signIn = e => {
         e.preventDefault();
-        //firebase login
+        //firebase login...
+        signInWithEmailAndPassword(auth, email, password)
+            .then( userCredential => history.push('/'))
+            .catch( error => alert(error.message))
     }
+
     const register = e => {
         e.preventDefault();
-//        //firebase register
-//        auth
-//            .createUserWithEmailAndPassword(email, password)
-//            .then((auth)=>{
-//                console.log(auth)
-//            })
-//            .catch(error => alert(error.message))
-        }
+       //firebase register
+        createUserWithEmailAndPassword( auth, email, password )
+            .then( userCredential => history.push('/'))
+//                console.log(userCredential)
+            .catch(error => alert(error.message))
+    }
 
     return (
         <div className="login">
