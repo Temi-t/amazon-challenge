@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/amazon-challenge/static/css/main.10ac79f0.chunk.css",
-    "main.js": "/amazon-challenge/static/js/main.4e344edb.chunk.js",
-    "main.js.map": "/amazon-challenge/static/js/main.4e344edb.chunk.js.map",
+    "main.js": "/amazon-challenge/static/js/main.b3500ba7.chunk.js",
+    "main.js.map": "/amazon-challenge/static/js/main.b3500ba7.chunk.js.map",
     "runtime-main.js": "/amazon-challenge/static/js/runtime-main.b8111600.js",
     "runtime-main.js.map": "/amazon-challenge/static/js/runtime-main.b8111600.js.map",
     "static/js/2.19ecc106.chunk.js": "/amazon-challenge/static/js/2.19ecc106.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.b8111600.js",
     "static/js/2.19ecc106.chunk.js",
     "static/css/main.10ac79f0.chunk.css",
-    "static/js/main.4e344edb.chunk.js"
+    "static/js/main.b3500ba7.chunk.js"
   ]
 }
