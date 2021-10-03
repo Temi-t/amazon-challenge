@@ -16,14 +16,15 @@ function App() {
     const [{}, dispatch] = useStateValue();
 
     useEffect(()=>{
-        onAuthStateChanged( auth, (user)=>{
-            console.log("USER >>> ",user)
-            if(user){
+        onAuthStateChanged( auth, (authUser)=>{
+            console.log("USER >>> ",authUser)
+            console.log("AUTH >>> ", auth)
+            if(authUser){
                 //if user is signed in
 
                 dispatch({
                     type: "SET_USER",
-                    user: user
+                    user: authUser
                 })
             } else{
                 //user is signed out

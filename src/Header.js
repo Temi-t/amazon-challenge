@@ -7,12 +7,15 @@ import { useStateValue } from './StateProvider';
 import {auth} from './Login';
 
 
-console.log("This is the auth from Login: ", auth);
 function Header () {
+
     const [ {basket, user}, dispatch ] = useStateValue();
     const handleAuthentication = () => {
-  //...
+        if(user){
+            auth.signOut()
+        }
     }
+
     return(
         <div className="header">
             <Link to="/">
@@ -30,7 +33,7 @@ function Header () {
                 <Search className="header__searchIcon"/>
             </div>
             <div className="header__nav">
-                <Link to="/login">
+                <Link to={!user && "/login"}>
                     <div onClick={handleAuthentication} className="header__option">
                         <span className="header__optionLineOne">
                             Hello Guest
