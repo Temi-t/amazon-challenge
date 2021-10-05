@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/amazon-challenge/static/css/main.10ac79f0.chunk.css",
-    "main.js": "/amazon-challenge/static/js/main.b3500ba7.chunk.js",
-    "main.js.map": "/amazon-challenge/static/js/main.b3500ba7.chunk.js.map",
-    "runtime-main.js": "/amazon-challenge/static/js/runtime-main.b8111600.js",
-    "runtime-main.js.map": "/amazon-challenge/static/js/runtime-main.b8111600.js.map",
-    "static/js/2.19ecc106.chunk.js": "/amazon-challenge/static/js/2.19ecc106.chunk.js",
-    "static/js/2.19ecc106.chunk.js.map": "/amazon-challenge/static/js/2.19ecc106.chunk.js.map",
-    "static/js/3.7f55b03c.chunk.js": "/amazon-challenge/static/js/3.7f55b03c.chunk.js",
-    "static/js/3.7f55b03c.chunk.js.map": "/amazon-challenge/static/js/3.7f55b03c.chunk.js.map",
+    "main.js": "/amazon-challenge/static/js/main.c80741b4.chunk.js",
+    "main.js.map": "/amazon-challenge/static/js/main.c80741b4.chunk.js.map",
+    "runtime-main.js": "/amazon-challenge/static/js/runtime-main.c17b8809.js",
+    "runtime-main.js.map": "/amazon-challenge/static/js/runtime-main.c17b8809.js.map",
+    "static/js/2.108ac646.chunk.js": "/amazon-challenge/static/js/2.108ac646.chunk.js",
+    "static/js/2.108ac646.chunk.js.map": "/amazon-challenge/static/js/2.108ac646.chunk.js.map",
+    "static/js/3.73385e81.chunk.js": "/amazon-challenge/static/js/3.73385e81.chunk.js",
+    "static/js/3.73385e81.chunk.js.map": "/amazon-challenge/static/js/3.73385e81.chunk.js.map",
     "index.html": "/amazon-challenge/index.html",
     "static/css/main.10ac79f0.chunk.css.map": "/amazon-challenge/static/css/main.10ac79f0.chunk.css.map",
-    "static/js/2.19ecc106.chunk.js.LICENSE.txt": "/amazon-challenge/static/js/2.19ecc106.chunk.js.LICENSE.txt",
+    "static/js/2.108ac646.chunk.js.LICENSE.txt": "/amazon-challenge/static/js/2.108ac646.chunk.js.LICENSE.txt",
     "static/media/ad2.e7f00f01.png": "/amazon-challenge/static/media/ad2.e7f00f01.png",
     "static/media/amazon_PNG11.c258172c.png": "/amazon-challenge/static/media/amazon_PNG11.c258172c.png",
     "static/media/chair_banner.10455e72.jpg": "/amazon-challenge/static/media/chair_banner.10455e72.jpg",
     "static/media/sasu-naru.9fcd835b.jpg": "/amazon-challenge/static/media/sasu-naru.9fcd835b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b8111600.js",
-    "static/js/2.19ecc106.chunk.js",
+    "static/js/runtime-main.c17b8809.js",
+    "static/js/2.108ac646.chunk.js",
     "static/css/main.10ac79f0.chunk.css",
-    "static/js/main.b3500ba7.chunk.js"
+    "static/js/main.c80741b4.chunk.js"
   ]
 }
