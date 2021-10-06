@@ -4,11 +4,13 @@ import Header from './Header';
 import Home from './Home';
 import Checkout from './Checkout';
 import Login from './Login.js';
+import Payment from './Payment';
 import { getAuth, onAuthStateChanged } from "firebase/auth"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 
-
+//  "homepage": "https://temi-t.github.io/amazon-challenge",
+//full ecommerce build with serverless architecture
 
 const auth = getAuth();
 function App() {
@@ -40,17 +42,23 @@ function App() {
   return (
     <Router>
         <div className="App">
-            <Header />
+
             <Switch>
-                <Route path="/login">
+                 <Route path="/login">
                     <Login />
-                </Route>
-                <Route path="/checkout">
-                    <Checkout/>
                 </Route> 
+                <Route path="/checkout">
+                    <Header />
+                    <Checkout/>
+                </Route>
+                <Route path="/payment">
+                    <Header />
+                    <Payment />
+                </Route>  
                 
 {/* Here, home route is kept at the bottom intentionally*/}
                 <Route path="/">
+                    <Header />
                     <Home />
                 </Route>                
             </Switch>
