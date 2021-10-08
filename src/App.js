@@ -12,6 +12,8 @@ import { useStateValue } from './StateProvider';
 //  "homepage": "https://temi-t.github.io/amazon-challenge",
 //full ecommerce build with serverless architecture
 
+//pk_test_51Ji3SnBUY2FILOIPzsZkohPza8xWsiv5gpewm31UOl1TbDkow79U39HHQO9KfOvB6qNtjYaHocxz2mc1lNOWSNAM00j202Unox
+
 const auth = getAuth();
 function App() {
 
