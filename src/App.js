@@ -8,13 +8,24 @@ import Payment from './Payment';
 import { getAuth, onAuthStateChanged } from "firebase/auth"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
 
 //  "homepage": "https://temi-t.github.io/amazon-challenge",
 //full ecommerce build with serverless architecture
 
-//pk_test_51Ji3SnBUY2FILOIPzsZkohPza8xWsiv5gpewm31UOl1TbDkow79U39HHQO9KfOvB6qNtjYaHocxz2mc1lNOWSNAM00j202Unox
+//api key: pk_test_51Ji3SnBUY2FILOIPzsZkohPza8xWsiv5gpewm31UOl1TbDkow79U39HHQO9KfOvB6qNtjYaHocxz2mc1lNOWSNAM00j202Unox
+
+
+//secret key:  sk_test_51Ji3SnBUY2FILOIPKgtRISZBWLQskoy6rCYckzE3dsCa72zDO1I4tJJMeL3lbzfUvms7G0wrW9A76yDkJ6YYxDnT00ORyqpfrh
+
+
 
 const auth = getAuth();
+const promise = loadStripe(
+"pk_test_51Ji3SnBUY2FILOIPzsZkohPza8xWsiv5gpewm31UOl1TbDkow79U39HHQO9KfOvB6qNtjYaHocxz2mc1lNOWSNAM00j202Unox"
+    );
+
 function App() {
 
     const [{}, dispatch] = useStateValue();
@@ -55,7 +66,9 @@ function App() {
                 </Route>
                 <Route path="/payment">
                     <Header />
-                    <Payment />
+                    <Elements stripe={promise}>
+                        <Payment />
+                    </Elements>
                 </Route>  
                 
 {/* Here, home route is kept at the bottom intentionally*/}
