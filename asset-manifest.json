@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/amazon-challenge/static/css/main.cba755bc.chunk.css",
-    "main.js": "/amazon-challenge/static/js/main.cc6446f5.chunk.js",
-    "main.js.map": "/amazon-challenge/static/js/main.cc6446f5.chunk.js.map",
-    "runtime-main.js": "/amazon-challenge/static/js/runtime-main.99744535.js",
-    "runtime-main.js.map": "/amazon-challenge/static/js/runtime-main.99744535.js.map",
-    "static/js/2.7cbc792a.chunk.js": "/amazon-challenge/static/js/2.7cbc792a.chunk.js",
-    "static/js/2.7cbc792a.chunk.js.map": "/amazon-challenge/static/js/2.7cbc792a.chunk.js.map",
-    "static/js/3.d0488843.chunk.js": "/amazon-challenge/static/js/3.d0488843.chunk.js",
-    "static/js/3.d0488843.chunk.js.map": "/amazon-challenge/static/js/3.d0488843.chunk.js.map",
+    "main.css": "/amazon-challenge/static/css/main.8f0b020f.chunk.css",
+    "main.js": "/amazon-challenge/static/js/main.273e0990.chunk.js",
+    "main.js.map": "/amazon-challenge/static/js/main.273e0990.chunk.js.map",
+    "runtime-main.js": "/amazon-challenge/static/js/runtime-main.80ceb9f9.js",
+    "runtime-main.js.map": "/amazon-challenge/static/js/runtime-main.80ceb9f9.js.map",
+    "static/js/2.079a5f44.chunk.js": "/amazon-challenge/static/js/2.079a5f44.chunk.js",
+    "static/js/2.079a5f44.chunk.js.map": "/amazon-challenge/static/js/2.079a5f44.chunk.js.map",
+    "static/js/3.6b2e9b92.chunk.js": "/amazon-challenge/static/js/3.6b2e9b92.chunk.js",
+    "static/js/3.6b2e9b92.chunk.js.map": "/amazon-challenge/static/js/3.6b2e9b92.chunk.js.map",
     "index.html": "/amazon-challenge/index.html",
-    "static/css/main.cba755bc.chunk.css.map": "/amazon-challenge/static/css/main.cba755bc.chunk.css.map",
-    "static/js/2.7cbc792a.chunk.js.LICENSE.txt": "/amazon-challenge/static/js/2.7cbc792a.chunk.js.LICENSE.txt",
-    "static/media/ad2.e7f00f01.png": "/amazon-challenge/static/media/ad2.e7f00f01.png",
-    "static/media/amazon_PNG11.c258172c.png": "/amazon-challenge/static/media/amazon_PNG11.c258172c.png",
-    "static/media/chair_banner.10455e72.jpg": "/amazon-challenge/static/media/chair_banner.10455e72.jpg",
-    "static/media/sasu-naru.9fcd835b.jpg": "/amazon-challenge/static/media/sasu-naru.9fcd835b.jpg"
+    "precache-manifest.9ff62244a5951f99997f071fec9a35a8.js": "/amazon-challenge/precache-manifest.9ff62244a5951f99997f071fec9a35a8.js",
+    "service-worker.js": "/amazon-challenge/service-worker.js",
+    "static/css/main.8f0b020f.chunk.css.map": "/amazon-challenge/static/css/main.8f0b020f.chunk.css.map",
+    "static/js/2.079a5f44.chunk.js.LICENSE.txt": "/amazon-challenge/static/js/2.079a5f44.chunk.js.LICENSE.txt",
+    "static/media/ad2.png": "/amazon-challenge/static/media/ad2.e4246ac4.png",
+    "static/media/amazon_PNG11.png": "/amazon-challenge/static/media/amazon_PNG11.1a7d775d.png",
+    "static/media/chair_banner.jpg": "/amazon-challenge/static/media/chair_banner.41b82b30.jpg",
+    "static/media/sasu-naru.jpg": "/amazon-challenge/static/media/sasu-naru.90a96657.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.99744535.js",
-    "static/js/2.7cbc792a.chunk.js",
-    "static/css/main.cba755bc.chunk.css",
-    "static/js/main.cc6446f5.chunk.js"
+    "static/js/runtime-main.80ceb9f9.js",
+    "static/js/2.079a5f44.chunk.js",
+    "static/css/main.8f0b020f.chunk.css",
+    "static/js/main.273e0990.chunk.js"
   ]
 }
