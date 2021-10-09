@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e36f6aedaab8500d89d932a843b8b9d",
+    "revision": "bf3aca2549209c40eeb8e5c1ec243796",
     "url": "/amazon-challenge/index.html"
   },
   {
-    "revision": "3c19aa706d1247bfa790",
-    "url": "/amazon-challenge/static/css/main.8f0b020f.chunk.css"
+    "revision": "6547c70077762563a628",
+    "url": "/amazon-challenge/static/css/main.842c1a9b.chunk.css"
   },
   {
-    "revision": "4a9ae6e80462e0bf0712",
-    "url": "/amazon-challenge/static/js/2.079a5f44.chunk.js"
+    "revision": "2bdad13a56c4eac2ec92",
+    "url": "/amazon-challenge/static/js/2.37dd8fa4.chunk.js"
   },
   {
     "revision": "578dce85f2f6ab6ee58ce1b34782cc51",
-    "url": "/amazon-challenge/static/js/2.079a5f44.chunk.js.LICENSE.txt"
+    "url": "/amazon-challenge/static/js/2.37dd8fa4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "332dd8bc622a95c932d0",
-    "url": "/amazon-challenge/static/js/3.6b2e9b92.chunk.js"
+    "revision": "8a876a17ffc70007eda2",
+    "url": "/amazon-challenge/static/js/3.f98ac3d1.chunk.js"
   },
   {
-    "revision": "3c19aa706d1247bfa790",
-    "url": "/amazon-challenge/static/js/main.273e0990.chunk.js"
+    "revision": "6547c70077762563a628",
+    "url": "/amazon-challenge/static/js/main.1986f3e5.chunk.js"
   },
   {
-    "revision": "fd64731bea18657585ce",
-    "url": "/amazon-challenge/static/js/runtime-main.80ceb9f9.js"
+    "revision": "889d85cf21ef02b7b650",
+    "url": "/amazon-challenge/static/js/runtime-main.b32e5625.js"
   },
   {
     "revision": "e4246ac479f53099584b0a677bf4e7c5",
