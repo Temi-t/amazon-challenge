@@ -7,12 +7,20 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { getBasketTotal } from './reducer';
 import NumberFormat from 'react-number-format';
 import axios from "./axios.js";
-
+//import { db, fireStoreLite } from "./firebase";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 function Payment () {
     const stripe = useStripe();
     const elements = useElements();
     const history = useHistory();
+
+    const db = getFirestore();
+    
+//    const collection = fireStoreLite.collection;
+//console.log(">>>>>>> FireStoreLite: ",fireStoreLite)
+console.log("####### Database: ",db)
+
 
     const [{ basket, user }, dispatch] = useStateValue();
     const [error, setError] = useState(null);
@@ -34,7 +42,7 @@ function Payment () {
         getClientSecret();
     }, [basket]);
 
-
+    console.log("the secret is: ..... ", clientSecret)
     const handleSubmit = async (e) => {
              // handle stripe
             e.preventDefault();
@@ -46,12 +54,46 @@ function Payment () {
                 }
             }).then(({ paymentIntent }) => {
                     //paymentIntent = payment confirmation
+
+//                    db
+//                        .collection('users')
+//                        .doc(user?.id)
+//                        .collection('orders')
+//                        .doc(paymentIntent.id)
+//                        .set({
+//                            basket: basket,
+//                            amount: paymentIntent.amount,
+//                            created: paymentIntent.created
+//                        })
+
+                        db
+                        .collection('users')
+                        .doc(user?.id)
+                        .collection('orders')
+                        .doc(paymentIntent.id)
+                        .set({
+                            basket: basket,
+                            amount: paymentIntent.amount,
+                            created: paymentIntent.created
+                        })
+                        const docRef = await addDoc(collection(db, "users"), {
+                            userId: user?.id,
+                            .
+                        });
+
+
+
                     setSucceeded(true);
                     setError(null);
                     setProcessing(false);
+
+                    dispatch({
+                        type: "EMPTY_BASKET",
+                    })
                 
                     history.replace('/orders')
                 })
+                .catch(error => console.log("Caugth this error: ", error));
     }
     const handleChange = e => {
         //listen for changes in card elements and display any errors during typing
