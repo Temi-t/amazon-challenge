@@ -1,7 +1,8 @@
 //import firebase from 'firebase/compat/app';
 //import * as authentication from 'firebase/auth'
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from "firebase/firestore/lite";
+//import { getFirestore } from "firebase/firestore";
+//import * as fireStoreLite from "firebase/firestore/lite";
 
 
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -16,9 +17,10 @@ const firebaseConfig = {
 };
  
 const firebaseApp = initializeApp(firebaseConfig);
-const db = getFirestore(firebaseApp);
+//const db = fireStoreLite.getFirestore(firebaseApp);
 
 //const createUserWithEmailAndPassword = authentication.createUserWithEmailAndPassword;
 //const auth = authentication.getAuth();
  
-export { db };
+//export { db, fireStoreLite };
+
