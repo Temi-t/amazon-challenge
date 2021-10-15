@@ -7,17 +7,16 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { getBasketTotal } from './reducer';
 import NumberFormat from 'react-number-format';
 import axios from "./axios.js";
-//import { db, fireStoreLite } from "./firebase";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { getFirestore, setDoc, doc} from "firebase/firestore";
+
 
 function Payment () {
     const stripe = useStripe();
     const elements = useElements();
     const history = useHistory();
-
     const db = getFirestore();
     
-//    const collection = fireStoreLite.collection;
+// const collection = fireStoreLite.collection;
 //console.log(">>>>>>> FireStoreLite: ",fireStoreLite)
 console.log("####### Database: ",db)
 
@@ -40,6 +39,7 @@ console.log("####### Database: ",db)
             setClientSecret(response.data.clientSecret)
         }
         getClientSecret();
+
     }, [basket]);
 
     console.log("the secret is: ..... ", clientSecret)
@@ -53,36 +53,23 @@ console.log("####### Database: ",db)
                     card: elements.getElement(CardElement)
                 }
             }).then(({ paymentIntent }) => {
-                    //paymentIntent = payment confirmation
+                    //paymentIntent = payment confirmation(from stripe)
 
-//                    db
-//                        .collection('users')
-//                        .doc(user?.id)
-//                        .collection('orders')
-//                        .doc(paymentIntent.id)
-//                        .set({
-//                            basket: basket,
-//                            amount: paymentIntent.amount,
-//                            created: paymentIntent.created
-//                        })
-
-                        db
-                        .collection('users')
-                        .doc(user?.id)
-                        .collection('orders')
-                        .doc(paymentIntent.id)
-                        .set({
+                    //path should be "collection/document"
+                    const docRef = doc(db, `users/${user?.uid}`);
+                    const childDoc = doc(docRef, "orders/paymentIntent.id");
+                    //const childDocRef = doc(docRef, "newCollection/newDoc") for relative path
+                    // or
+                    // "users/user?.uid/newCollection/newDoc" for absolute path                
+                    (function writeUserDetail() {
+                        const shoppingDetails = {
                             basket: basket,
                             amount: paymentIntent.amount,
                             created: paymentIntent.created
-                        })
-                        const docRef = await addDoc(collection(db, "users"), {
-                            userId: user?.id,
-                            .
-                        });
-
-
-
+                        };
+                        setDoc(docRef, shoppingDetails)
+                    })()
+                            
                     setSucceeded(true);
                     setError(null);
                     setProcessing(false);
@@ -93,12 +80,12 @@ console.log("####### Database: ",db)
                 
                     history.replace('/orders')
                 })
-                .catch(error => console.log("Caugth this error: ", error));
+                .catch(error => console.log("Ooops! Caugth this error: ", error));
     }
-    const handleChange = e => {
+    const handleChange = event => {
         //listen for changes in card elements and display any errors during typing
-        setDisabled(e.empty);
-        setError(e.error ? e.error.message : "");
+        setDisabled(event.empty);
+        setError(event.error ? event.error.message : "");
     }
 
     return(
@@ -161,9 +148,13 @@ console.log("####### Database: ",db)
                                     <h3>Order Total: {value}</h3>
                                   )}
                                 />
-                                <button disabled={processing || disabled || succeeded} >
-                                    <span>{processing ? <p> ...Processing</p> : "Buy Now"}</span>
-                                </button>
+                                {
+                                    typeof clientSecret === "string" ?
+                                    <button disabled={processing || disabled || succeeded} >
+                                            <span>{processing ? <p> ...Processing</p> : "Buy Now"}</span>
+                                    </button> :
+                                    "Enter card details above"
+                                }
                             </div>
                             
                             {/*Errors*/}
