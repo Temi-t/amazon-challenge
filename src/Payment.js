@@ -55,7 +55,7 @@ console.log("####### Database: ",db)
             }).then(({ paymentIntent }) => {
                     //paymentIntent = payment confirmation(from stripe)
 
-                    //path should be "collection/document"
+                    //firebase paths should be "collection/document"
                     const docRef = doc(db, `users/${user?.uid}`);
                     const childDoc = doc(docRef, "orders/paymentIntent.id");
                     //const childDocRef = doc(docRef, "newCollection/newDoc") for relative path
