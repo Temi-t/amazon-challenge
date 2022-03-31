@@ -2,7 +2,7 @@ import React from 'react';
 import './home.css';
 import banner from './images/chair_banner.jpg';
 import Product from './Product';
-import saruto from './images/sasu-naru.jpg';
+import img from './images/index.js';
 import {v4 as uuidv4} from 'uuid';
 
 function Home () {
@@ -19,14 +19,14 @@ function Home () {
                     id={uuidv4()}
                     title="The lean startup"
                     price={29.99}
-                    image={saruto}
+                    image={img.img1}
                     rating={5}
                 />
                 <Product 
                     id={uuidv4()}
                     title="Something nice"
                     price={45.09}
-                    image={saruto}
+                    image={img.img2}
                     rating={3}
                 />
             </div>
@@ -35,21 +35,21 @@ function Home () {
                     id={uuidv4()}
                     title="The second card"
                     price={14.39}
-                    image={saruto}
+                    image={img.img3}
                     rating={4}
                 /> 
                 <Product 
                     id={uuidv4()}
                     title="why are we here"
                     price={36.59}
-                    image={saruto}
+                    image={img.img4}
                     rating={2}
                 />
                 <Product 
                     id={uuidv4()}
                     title="Things we do for food"
                     price={8.32}
-                    image={saruto}
+                    image={img.img5}
                     rating={5}
                 />
             </div>
@@ -58,7 +58,7 @@ function Home () {
                     id={uuidv4()}
                     title="The green house"
                     price={29.99}
-                    image={saruto}
+                    image={img.img6}
                     rating={5}
                 />
             </div>
