@@ -20,6 +20,7 @@ function Product ({id, title, image, price, rating}){
     }    
     return(
         <div className="product">
+            <div className="product_shade"></div>
             <div className="product__info">
                 <p>{title}</p>
                 <p className="product__price">

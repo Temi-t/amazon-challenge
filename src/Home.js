@@ -17,6 +17,29 @@ function Home () {
             <div className="home__row">
                 <Product 
                     id={uuidv4()}
+                    title="This is the title part of this product"
+                    price={99.49}
+                    image={img.img3}
+                    rating={4}
+                /> 
+                <Product 
+                    id={uuidv4()}
+                    title="This is also another part of this component"
+                    price={32.99}
+                    image={img.img4}
+                    rating={3}
+                />
+                <Product 
+                    id={uuidv4()}
+                    title="What do we have here ..."
+                    price={78.29}
+                    image={img.img5}
+                    rating={2}
+                />
+            </div>
+            <div className="home__row">
+                <Product 
+                    id={uuidv4()}
                     title="The lean startup"
                     price={29.99}
                     image={img.img1}
@@ -35,21 +58,21 @@ function Home () {
                     id={uuidv4()}
                     title="The second card"
                     price={14.39}
-                    image={img.img3}
+                    image={img.img7}
                     rating={4}
                 /> 
                 <Product 
                     id={uuidv4()}
                     title="why are we here"
                     price={36.59}
-                    image={img.img4}
+                    image={img.img8}
                     rating={2}
                 />
                 <Product 
                     id={uuidv4()}
                     title="Things we do for food"
                     price={8.32}
-                    image={img.img5}
+                    image={img.img9}
                     rating={5}
                 />
             </div>

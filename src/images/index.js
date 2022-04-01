@@ -1,5 +1,5 @@
  let img = {
-  img1: require('./img1.jpeg'),
+  img1: require('./img1.png'),
   img2: require('./img2.jpg'),
   img3: require('./img3.jpg'),
   img4: require('./img4.png'),
